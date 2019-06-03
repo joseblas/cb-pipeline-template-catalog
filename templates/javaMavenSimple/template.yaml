@@ -5,3 +5,9 @@ parameters:
   - name: mavenAdditionalTargets
     type: string
     displayName: Additional Maven build targets
+multibranch:
+  branchSource:
+    github:
+      repoOwner: ${repoOwner}
+      repository: ${repoName}
+      credentialsId: ${gitCredentialsId}
