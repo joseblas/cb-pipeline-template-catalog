@@ -1,0 +1,7 @@
+version: 1
+type: pipeline-template
+name: javaMavenSimple
+parameters:
+  - name: mavenAdditionalTargets
+    type: string
+    displayName: Additional Maven build targets
