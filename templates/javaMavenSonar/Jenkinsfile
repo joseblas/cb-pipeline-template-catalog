@@ -9,29 +9,7 @@ pipeline {
         lib('core@master')
         lib('maven@master')
     }
-    agent {
-        kubernetes {
-            label 'mypod'
-            defaultContainer 'jnlp'
-            yaml """
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    some-label: some-label-value
-spec:
-  containers:
-  - name: maven
-    image: maven:3-jdk-8
-    command:
-    - cat
-    tty: true
-  - name: sonar
-    image:  newtmitch/sonar-scanner
-    command: ["cat"]
-"""
-        }
-    }
+    agent any
     stages {
         stage('Test versions') {
             steps {
