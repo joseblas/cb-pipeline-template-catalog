@@ -9,6 +9,6 @@ parameters:
 multibranch:
   branchSource:
     github:
-      repoOwner: joostvdg
+      repoOwner: joseblas
       repository: ${repoName}
       credentialsId: github-token
