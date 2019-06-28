@@ -6,6 +6,9 @@ parameters:
   - name: mavenAdditionalTargets
     type: string
     displayName: Additional Maven build targets
+  - name: repoName
+    type: string
+    displayName: Repo name
 multibranch:
   branchSource:
     github:
